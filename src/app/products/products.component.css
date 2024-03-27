@@ -1,0 +1,41 @@
+.parent2{
+    
+    padding:25px 25px;
+}
+.top-content2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+input{
+    
+    border: none;
+    padding:5px;
+    outline: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+button{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+/* .button-contianer{
+    width: 15px;
+    display: flex;
+    background-color: black;
+} */
+label{
+    display: inline-block;
+    width: 100px;
+}
+.red{
+color:red;
+}
+.blue{
+    color:blue;
+}
+.green{
+    color:green;
+}

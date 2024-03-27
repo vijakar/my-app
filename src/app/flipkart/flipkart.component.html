@@ -1,0 +1,12 @@
+<div class="card-container">
+    <div *ngFor="let card of cards" class="card">
+        
+        <img class="card-img" src={{card.image}} alt="">
+        <p class="rating-tag">{{card.rating.rate}} <span><i class="fa-solid fa-star" style="color:green;"></i> | {{card.rating.count}}k</span></p>
+        <div class="text-content">
+        <p class="title">{{card.category}}</p>
+        <p class="description">{{card.title}}</p>
+        <p class="price-tag">Rs.{{card.price}} <del style="color: gray;">Rs.2999</del> <span style="color: red;">(81% OFF)</span> </p>
+    </div>
+</div>
+</div>

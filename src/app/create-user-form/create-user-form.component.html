@@ -1,0 +1,68 @@
+<h1>Create User Form</h1>
+
+<form action="" [formGroup]="userForm">
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label for="">Age:</label>
+    <input type="number" formControlName="age">
+    <br>
+    <label for="">Phone:</label>
+    <input type="number" formControlName="phone">
+    <br>
+    <label for="">Email:</label>
+    <input type="email" formControlName="email">
+    <br>
+    <div formGroupName="address">
+        <label for="">City:</label>
+        <input type="email" formControlName="city">
+        <br>
+        <label for="">pin:</label>
+    <input type="email" formControlName="pin">
+    <br>
+
+    </div>
+    <button type="button" (click)="add()" class="btn btn-primary">Add</button>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls; let i = index">
+            <div formGroupName="{{i}}">
+                <label for="">Number:</label>
+                <input type="number" formControlName="number">
+                <br>
+                <label for="">Expiry:</label>
+                <input type="month" formControlName="expiry">
+                <br>
+                <label for="">cvv:</label>
+                <input type="number" formControlName="cvv">
+                <br>
+                <button class="btn btn-danger" (click)="delete(i)">Delete</button> 
+                <hr>
+                
+
+            </div>
+        </div>
+    </div>
+    
+    
+    <button class="btn btn-warning" (click)="submit()">submit</button>
+<br><br>
+    <div [formGroup]="radioForm">
+        <label for="">Type:</label>
+    <input  type="radio" name="select" (click)="onDayscholar()" formControlName="dayscholar"/>
+    <label  for="">Dayscholar</label>
+    <input  type="radio" name="select" (click)="onHostel()" formControlName="residential"/>
+    <label for="">Residential</label>
+    <br><br>
+    <div *ngIf="dayInput">
+    <label for="" id="bus" >Bus fee</label>
+    <input type="number" formControlName="busfee" id="bus">
+</div>
+    <br>
+    <div *ngIf="hostelInput">
+    <label for="">Hostel fee</label>
+    <input type="number" formControlName="hostelfee">
+    </div>
+</div>
+
+</form>
+

@@ -1,0 +1,44 @@
+<input type="text" (keyup)="getSelectedAccount()" [(ngModel)]="term">
+<select name="" id="" (change)="getPage()" [(ngModel)]="pageNo">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+</select>
+
+<select name="" id="" [(ngModel)]="column">
+    <option value="account_name">Acc.Name</option>
+    <option value="city">City</option>
+</select>
+
+<select name="" id="" [(ngModel)]="order">
+<option value="asc">Ascending</option>
+<option value="dsc">Descending</option>
+</select>
+
+<button (click)="getSort()">sort</button>
+
+<table class="table table-border table-dark">
+    
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ac.Name</th>
+            <th>Ac.Balance</th>
+            <th>Ac.Number</th>
+            <th>City</th>
+            <th>Profile</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td>{{account.id}}</td>
+            <td>{{account.account_name}}</td>
+            <td>{{account.available_balance}}</td>
+            <td>{{account.account_number}}</td>
+            <td>{{account.city}}</td>
+            <td><img src={{account.profie_picture}} alt="" width="100px" height="100px"></td>
+            
+        </tr>
+    </tbody>
+</table>

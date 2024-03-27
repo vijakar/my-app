@@ -1,0 +1,14 @@
+.parent{
+    width: 80%;
+    height: 100vh;
+    text-align: center;
+    color:white;
+}
+button{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border:none;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}

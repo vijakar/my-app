@@ -1,0 +1,22 @@
+<div class="parent" *ngFor="let photo of photos.data.memes">
+    <p class="name">{{photo.name}}</p>
+    <p class="width">Width:{{photo.width}}</p>
+    <p class="width">Height:{{photo.height}}</p>
+    
+    <img src={{photo.url}} width={{photo.width}} height={{photo.height}} alt="">
+    <img class="car_img" src="/assets/AUDI.jpeg"  [width]="photo.width" [height]="photo.height" alt="">
+    
+
+     <!-- <img [src]="photo.url" width="500px" height="494px" alt=""> -->
+    <!-- <img [src]="photo.url" [width]="photo.width" [height]="photo.height" alt=""> -->
+    
+
+           <!-- <img [src]="photo.url" [width]="photo.width" [height]="photo.height" alt=""> -->
+    
+    
+
+    
+    
+    
+
+</div>

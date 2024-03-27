@@ -1,0 +1,36 @@
+table{
+    font-size: 14px;
+}
+label{
+    background-color:rgb(2, 0, 139);
+    color:white;
+    margin-left: 10px;
+    padding:0px 10px;
+    margin-bottom: 5px;
+}
+input{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    outline: none;
+}
+button{
+    border:none;
+    padding:3px 5px;
+}
+.range-label{
+    background-color:rgb(179, 170, 167);
+    color:white;
+    margin-right:0px;
+    padding-top: 1px;
+}
+.range-input{
+    margin-left: 0px;
+    outline: none;
+}
+.submit-btn{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgba(0, 110, 255, 0.582);
+    color: white;
+}

@@ -1,0 +1,58 @@
+<div>
+            <input type="text" (keyup)="filterCars()" [(ngModel)]="term">
+            
+            <select  [(ngModel)]="limit">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                
+            </select>
+           
+            
+            <select [(ngModel)]="pagesNo">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            
+        </select>
+
+        <button (click)="filteredPages()">filterCars</button>
+
+            <select name="" id="" [(ngModel)]="column">
+                <option value="color">color</option>
+                <option value="model">model</option>
+            </select>
+            <select name="" id="" [(ngModel)]="order">
+                <option value="asc">ascending</option>
+                <option value="dsc">descending</option>
+            </select>
+
+            <button (click)="sorted()">sort</button>
+            <table class="table tabl-dark">
+                <tr>
+            <th>name</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>color</th>
+            <th>id</th>
+            <th>image</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let car of cars ">
+                <td>{{car.Vehicle}}</td>
+                <td>{{car.manufacturer}}</td>
+                <td>{{car.model}}</td>
+                <td>{{car.color}}</td>
+                <td>{{car.id}}</td>
+                <td><img src={{car.image}} width="100px" height="100px" alt=""></td>
+                <td><button (click)="deleteCar(car.id)">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

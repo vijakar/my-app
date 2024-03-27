@@ -1,0 +1,76 @@
+
+<input type="text" (keypress)="filter()" [(ngModel)]="term">
+<label for="">Price range</label>
+<label class="range-label" for="">from:</label>
+<input class="range-input" type="number" [(ngModel)]="formValue">
+<label class="range-label" for="">to:</label>
+<input  class="range-input" type="number" [(ngModel)]="toValue">
+<button class="submit-btn" (click)="range()">Submit</button>
+<br>
+<label for="">Manufacturer</label>
+<select id="" (change)="manfacture()" [(ngModel)]="manufactureValue">
+    <option value="">All</option>
+    <option *ngFor="let vehicle of vehicles"  value={{vehicle.manufacturer}}>{{vehicle.manufacturer}}</option>
+    
+</select>
+
+<label for="">Fuel</label>
+<select id="" (change)="fuel()" [(ngModel)]="fuelValue">
+    <option value="">All</option>
+    <option *ngFor="let vehicle of vehicles"  value={{vehicle.fuel}}>{{vehicle.fuel}}</option>
+    
+</select>
+
+<label for="">Color</label>
+<select id="" (change)="color()" [(ngModel)]="colorValue">
+    <option value="">All</option>
+    <option *ngFor="let vehicle of vehicles"  value={{vehicle.color}}>{{vehicle.color}}</option>
+    
+</select>
+
+<label for="">Type</label>
+<select id="" (change)="type()" [(ngModel)]="typeValue">
+    <option value="">All</option>
+    <option *ngFor="let vehicle of vehicles"  value={{vehicle.type}}>{{vehicle.type}}</option>
+</select>
+
+<label for="">Price</label>
+<select id="" (change)="cost()" [(ngModel)]="costValue">
+    <option value="">All</option>
+    <option value="true">high to low</option>
+    <option value="false">low to high</option>
+</select>
+
+
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Vehicle</th>
+            <th>Manufacture</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Fuel</th>
+            <th>Color</th>
+            <th>Image</th>
+            <th>Cost</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+        <td>{{vehicle.id}}</td>
+        <td>{{vehicle.Vehicle}}</td>
+        <td>{{vehicle.manufacturer}}</td>
+        <td>{{vehicle.model}}</td>
+        <td>{{vehicle.type}}</td>
+        <td>{{vehicle.fuel}}</td>
+        <td>{{vehicle.color}}</td>
+        <td><img src={{vehicle.image}} alt="" width="100px" height="100px"></td>
+        <td>{{vehicle.cost}}</td>
+        <td><button>Delete</button></td>
+        
+        </tr>
+    </tbody>
+</table>

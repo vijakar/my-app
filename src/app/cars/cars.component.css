@@ -1,0 +1,21 @@
+.parent{
+    text-align: center;
+}
+
+p{
+    font-size: 45px;
+    font-weight: 600;
+    color: white;
+}
+label{
+    font-size: 18px;
+    margin-left:  10px;
+}
+input{
+    margin-left: 5px;
+}
+img{
+    width: 500px;
+    height: 350px;
+    margin-top: 15px;
+}
