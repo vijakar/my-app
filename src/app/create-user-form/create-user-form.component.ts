@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { cvv, tcsMail } from './validators';
 
 @Component({
   selector: 'app-create-user-form',
@@ -9,16 +10,19 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 export class CreateUserFormComponent {
 public userForm:FormGroup = new FormGroup(
   {
-    name: new FormControl(),
-    age: new FormControl(),
-    phone: new FormControl(),
-    email: new FormControl(),
+    name: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+    age: new FormControl(null, [Validators.required, Validators.min(0), Validators.max(100)]),
+    phone: new FormControl(null, [Validators.required, Validators.min(1000000000), Validators.max(9999999999)]),
+    email: new FormControl(null, [Validators.required, Validators.email, tcsMail]),
     address: new FormGroup({
-      city: new FormControl(),
-      pin: new FormControl()
+      city: new FormControl(null, [Validators.required]),
+      pin: new FormControl(null, [Validators.required, Validators.min(10000), Validators.max(99999)])
     }),
 
-    cards: new FormArray([])
+    cards: new FormArray([]),
+
+  type:new FormControl(),
+  
     
   }
 )
@@ -30,40 +34,42 @@ get cardsFormArray(){
 add(){
   this.cardsFormArray.push(
     new FormGroup({
-      number: new FormControl(),
+      number: new FormControl(null, Validators.required),
       expiry: new FormControl(),
-      cvv: new FormControl()
+      cvv: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(3), cvv])
     })
   )
 }
 
-submit(){
-  console.log(this.userForm);
-}
 
 delete(i:number){
   this.cardsFormArray.removeAt(i);
 }
-public dayInput:boolean=false;
-public hostelInput:boolean=false;
 
-public radioForm=new FormGroup({
-  dayscholar: new FormControl(),
-  residential:new FormControl(),
-  busfee:new FormControl(),
-  hostelfee:new FormControl()
-})
 
-onDayscholar(){
-  this.dayInput = true;
-  this.hostelInput = false;
+
+
+
+
+constructor(){
+  this.userForm.get('type')?.valueChanges.subscribe(
+    (data:any)=>{
+      if(data=='dayscholar'){
+        this.userForm.addControl('busfee', new FormControl());
+        this.userForm.removeControl("hostelfee");
+      }
+      else{
+        this.userForm.addControl("hostelfee", new FormControl());
+        this.userForm.removeControl("busfee")
+      }
+    }
+  )
 }
 
-onHostel(){
-  this.hostelInput = true;
-  this.dayInput = false
+submit(){
+  this.userForm.markAllAsTouched();
+  console.log(this.userForm);
 }
-
 
 
 }
