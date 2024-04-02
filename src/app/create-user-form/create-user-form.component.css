@@ -13,3 +13,9 @@ button{
 .error{
     color: red;
 }
+.icon{
+    color: red;
+    font-size: 25px;
+    margin-left: 102px;
+    margin-top: 20px;
+}
