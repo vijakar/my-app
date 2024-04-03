@@ -1,0 +1,14 @@
+<div>
+    <button (click)="rating1()" class="btn btn-primary">Rating-1</button>
+    <button (click)="rating2()">Rating-2</button>
+    <button (click)="rating3()">Rating-3</button>
+    <button (click)="rating4()">Rating-4</button>
+    <button (click)="rating5()">Rating-5</button>
+</div>
+<app-rating-child [url]="imgUrl"></app-rating-child>
+
+<div>
+    <h1>Textarea</h1>
+    <textarea name="" id="" cols="30" rows="10" [maxLength]="50" [(ngModel)]="countChar"></textarea>
+    <h1>Count:{{countChar.length}}/50</h1>
+</div>

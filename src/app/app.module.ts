@@ -38,6 +38,10 @@ import { CreateAllVehiclesComponent } from './create-all-vehicles/create-all-veh
 import { CreateAccountFormComponent } from './create-account-form/create-account-form.component';
 import {MatIconModule} from '@angular/material/icon';
 import { CreateUserFormComponent } from './create-user-form/create-user-form.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { RatingChildComponent } from './rating-child/rating-child.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +71,10 @@ import { CreateUserFormComponent } from './create-user-form/create-user-form.com
     CreateAllVehiclesComponent,
     CreateAccountFormComponent,
     CreateUserFormComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    RatingChildComponent,
     
   ],
   imports: [

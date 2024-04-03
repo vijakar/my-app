@@ -25,6 +25,8 @@ import { CreateAllVehiclesComponent } from './create-all-vehicles/create-all-veh
 import { CreateAccountFormComponent } from './create-account-form/create-account-form.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { CreateUserFormComponent } from './create-user-form/create-user-form.component';
+import { ParentComponent } from './parent/parent.component';
+import { RatingComponent } from './rating/rating.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -50,7 +52,9 @@ const routes: Routes = [
     {path:'materialui', component:AngularMaterialComponent},
     {path:'createallvehicles', component:CreateAllVehiclesComponent},
     {path:'creataccountform', component:CreateAccountFormComponent},
-    {path:'createuserform', component:CreateUserFormComponent}
+    {path:'createuserform', component:CreateUserFormComponent},
+    {path:'parent', component:ParentComponent},
+    {path:'rating', component:RatingComponent}
   ]},
   {path:"", component:LoginComponent},
   {path:"**", component:PagenotfoundComponent}
