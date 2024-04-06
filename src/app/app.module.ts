@@ -42,6 +42,15 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { RatingChildComponent } from './rating-child/rating-child.component';
+import { ColorChangeComponent } from './color-change/color-change.component';
+import { CommunicationProductsComponent } from './communication-products/communication-products.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
+import { SiblingTodoAppComponent } from './sibling-todo-app/sibling-todo-app.component';
+import { SiblingEditComponent } from './sibling-edit/sibling-edit.component';
+import { SiblingViewComponent } from './sibling-view/sibling-view.component';
+import { SiblingCreateComponent } from './sibling-create/sibling-create.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -75,6 +84,14 @@ import { RatingChildComponent } from './rating-child/rating-child.component';
     ChildComponent,
     RatingComponent,
     RatingChildComponent,
+    ColorChangeComponent,
+    CommunicationProductsComponent,
+    NavComponent,
+    CartComponent,
+    SiblingTodoAppComponent,
+    SiblingEditComponent,
+    SiblingViewComponent,
+    SiblingCreateComponent,
     
   ],
   imports: [
@@ -90,7 +107,9 @@ import { RatingChildComponent } from './rating-child/rating-child.component';
     MatButtonModule,
     MatDividerModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    AboutUsModule,
+    
 
 
   ],

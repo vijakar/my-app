@@ -1,0 +1,11 @@
+<div class="create-card">
+    <div class="text-content" *ngFor="let todo of inputDatas, let i=index">
+        <h1><b>Task:</b>{{todo.text}}</h1>
+        <h1><b>Time:</b>{{todo.date}}</h1>
+        <div>
+            <button class="btn btn-success" (click)="view(todo)">View</button>
+            <button class="btn btn-warning" (click)="edit(todo)">Edit</button>
+            <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+        </div>
+    </div>
+</div>

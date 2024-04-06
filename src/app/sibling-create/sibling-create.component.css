@@ -1,0 +1,43 @@
+.create-card{
+    background-color: rgb(238, 126, 74);
+    padding:15px 20px;
+    border-radius: 10px;
+    height: 90vh;
+    width: 26vw;
+    margin-right: 15px;
+  
+}
+.text-box{
+    display: flex;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+input{
+    padding:5px 15px;
+    width:180px;
+    border:none;
+    outline: none;
+    margin-right: 5px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+
+
+}
+button{
+    margin-bottom: 5px;
+    margin-right: 10px;
+}

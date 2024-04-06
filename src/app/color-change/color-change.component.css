@@ -1,0 +1,27 @@
+.parent{
+    width: 85vw;
+    height: 100vh;
+padding:10vw 0px;
+}
+.view{
+    text-align: center;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    
+}
+
+input{
+    border:none;
+    outline: none;
+    padding:10px 45px;
+    margin-bottom: 20px;
+}
+p{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}

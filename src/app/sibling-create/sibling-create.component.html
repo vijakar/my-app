@@ -1,0 +1,15 @@
+<div class="create-card" [formGroup]="dataForm">
+    <h1>To-Do</h1>
+    <div class="text-box">
+    <p>Task:</p>
+    <textarea name="" id="" cols="30" rows="5" formControlName="text" [(ngModel)]="text"></textarea>
+</div>
+<br>
+    <label for="">Time:</label>
+    <input type="datetime-local" formControlName="date" [(ngModel)]="date">
+    <button class="btn btn-success">submit</button>
+    <div>
+        <button class="btn btn-primary" (click)="create()">Create</button>
+        <button class="btn btn-warning" (click)="reset()">Reset</button>
+    </div>
+</div>
