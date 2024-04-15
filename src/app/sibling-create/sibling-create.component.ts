@@ -16,11 +16,6 @@ export class SiblingCreateComponent {
       }
     )
     }
-
-
-
-  public text:string=''
-  public date:string=''
   
     public dataForm=new FormGroup(
       {
@@ -38,8 +33,8 @@ export class SiblingCreateComponent {
   }
 
   reset(){
-    this.text=''
-    this.date=''
+    this.dataForm.reset();
+
   }
  
 }

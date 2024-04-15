@@ -51,7 +51,10 @@
                 <td>{{car.color}}</td>
                 <td>{{car.id}}</td>
                 <td><img src={{car.image}} width="100px" height="100px" alt=""></td>
-                <td><button (click)="deleteCar(car.id)">delete</button></td>
+                <td>
+                    <button class="btn btn-info" (click)="viewCar(car.id)">View</button> 
+                    <button class="btn btn-primary" (click)="editCar(car.id)" >Edit</button> 
+                    <button class="btn btn-danger" (click)="deleteCar(car.id)">delete</button></td>
             </tr>
         </tbody>
     </table>

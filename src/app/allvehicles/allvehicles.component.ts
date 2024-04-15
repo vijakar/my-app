@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AllvehiclesService } from '../allvehicles.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-allvehicles',
@@ -16,7 +17,7 @@ export class AllvehiclesComponent {
 
 public cars:any=[];
 
-constructor(private _allvehiclesService:AllvehiclesService){
+constructor(private _allvehiclesService:AllvehiclesService, private _router:Router){
 
   _allvehiclesService.getCars().subscribe(
     (data:any)=>{
@@ -70,4 +71,14 @@ this._allvehiclesService.deleteApi(id).subscribe(
 )
 }
 
+viewCar(id:any){
+
+  this._router.navigateByUrl('/dashboard/vehicle-details/'+id)
+
+}
+
+editCar(id:any){
+  this._router.navigateByUrl('/dashboard/edit-car/'+id)
+
+}
 }

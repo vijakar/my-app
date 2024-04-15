@@ -43,6 +43,7 @@ add(){
 
 
 delete(i:number){
+  
   this.cardsFormArray.removeAt(i);
 }
 

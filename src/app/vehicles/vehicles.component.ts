@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicles',
@@ -14,6 +15,8 @@ public typeValue:string='';
 public costValue:string='';
 public formValue:number=0;
 public toValue:number=0;
+
+constructor(private _router:Router){}
 
 public vehicles:any=[
   {
@@ -1038,6 +1041,16 @@ cost(){
 
 range(){
     this.vehicles = this.vehicles.filter((vehicle:any)=>vehicle.cost >= this.formValue && vehicle.cost<=this.toValue);
+}
+
+
+viewCar(value:any){
+this._router.navigateByUrl('/dashboard/car-details/'+value)
+  
+}
+
+editCar(id:any){
+this._router.navigateByUrl('')
 }
 
 }

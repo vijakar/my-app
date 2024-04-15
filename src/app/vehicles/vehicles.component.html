@@ -11,7 +11,6 @@
 <select id="" (change)="manfacture()" [(ngModel)]="manufactureValue">
     <option value="">All</option>
     <option *ngFor="let vehicle of vehicles"  value={{vehicle.manufacturer}}>{{vehicle.manufacturer}}</option>
-    
 </select>
 
 <label for="">Fuel</label>
@@ -69,7 +68,12 @@
         <td>{{vehicle.color}}</td>
         <td><img src={{vehicle.image}} alt="" width="100px" height="100px"></td>
         <td>{{vehicle.cost}}</td>
-        <td><button>Delete</button></td>
+        <td>
+            <button class="btn btn-info" (click)="viewCar(vehicle)">View</button> 
+            <button class="btn btn-primary" (click)="editCar(vehicle.id)" >Edit</button> 
+            <button class="btn btn-danger">Delete</button>
+        
+        </td>
         
         </tr>
     </tbody>

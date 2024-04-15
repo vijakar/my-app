@@ -36,6 +36,9 @@ import { SiblingTodoAppComponent } from './sibling-todo-app/sibling-todo-app.com
 import { SiblingViewComponent } from './sibling-view/sibling-view.component';
 import { SiblingCreateComponent } from './sibling-create/sibling-create.component';
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CarDetailsComponent } from './car-details/car-details.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 const routes: Routes = [
   {path:"login", component:LoginComponent},
@@ -73,7 +76,11 @@ const routes: Routes = [
     {
       path: 'contactus',
       loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
-    }
+    },
+    {path:'vehicle-details/:id', component:VehicleDetailsComponent},
+    {path:'edit-car/:id', component:CreateAllVehiclesComponent},
+    {path:'car-details/:value', component:CarDetailsComponent},
+    {path:'pipes', component:PipesComponent}
     ]},
   {path:"", component:LoginComponent},
   {path:"**", component:PagenotfoundComponent}

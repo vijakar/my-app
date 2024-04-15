@@ -51,6 +51,13 @@ import { SiblingEditComponent } from './sibling-edit/sibling-edit.component';
 import { SiblingViewComponent } from './sibling-view/sibling-view.component';
 import { SiblingCreateComponent } from './sibling-create/sibling-create.component';
 import { AboutUsModule } from './about-us/about-us.module';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CarDetailsComponent } from './car-details/car-details.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { PricePipe } from './price.pipe';
+import { ImpDirective } from './imp.directive';
+import { CapitalDirective } from './capital.directive';
+import { AmountPipe } from './amount.pipe';
 
 @NgModule({
   declarations: [
@@ -92,6 +99,13 @@ import { AboutUsModule } from './about-us/about-us.module';
     SiblingEditComponent,
     SiblingViewComponent,
     SiblingCreateComponent,
+    VehicleDetailsComponent,
+    CarDetailsComponent,
+    PipesComponent,
+    PricePipe,
+    ImpDirective,
+    CapitalDirective,
+    AmountPipe,
     
   ],
   imports: [

@@ -54,9 +54,9 @@
             <img class="card-img" src={{product.image}} alt="">
             <p class="rating-tag">{{product.rating.rate}} <span><i class="fa-solid fa-star" style="color:green;"></i> | {{product.price}}k</span></p>
             <div class="text-content">
-            <p class="title">{{product.category}}</p>
+            <p class="title">{{100 | price}}</p>
             <p class="description">{{product.title}}</p>
-            <p class="price-tag">Rs.{{product.price}} <del style="color: gray;">Rs.2999</del> <span style="color: red;">(81% OFF)</span> </p>
+            <p class="price-tag">{{product.price}}  <del style="color: gray;">{{2999 | price}}</del> <span style="color: red;">(81% OFF)</span> </p>
         </div>
     </div>
     </div>
